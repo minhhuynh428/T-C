@@ -81,7 +81,7 @@
         --mark: #e7a090;
         --line: rgba(238, 238, 238, 0.14);
         --header: 64px;
-        --article: 680px;
+        --article: 820px;
       }
 
       * {
@@ -154,12 +154,12 @@
         text-transform: uppercase;
       }
 
-      /* ─── H1 (mobile-first: 25px) ─── */
+      /* ─── H1 (mobile-first) ─── */
       h1 {
-        margin: 28px 0 10px;
-        font-size: 25px;
+        margin: 24px 0 10px;
+        font-size: 21px;
         font-weight: 600;
-        line-height: 36px;
+        line-height: 30px;
         letter-spacing: -0.01em;
         text-align: center;
       }
@@ -198,19 +198,24 @@
       .meta-line {
         margin: 0;
         padding-top: 22px;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
-        line-height: 23px;
+        line-height: 26px;
       }
 
       .program > .meta-line:first-of-type {
         padding-top: 18px;
       }
 
+      .gallery + .meta-line {
+        padding-top: 60px;
+      }
+
       /* ─── Gallery 2×2 ─── */
       .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: start;
         gap: 6px;
         margin-top: 10px;
       }
@@ -218,9 +223,10 @@
       .gallery img {
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
+        aspect-ratio: 1024 / 578;
         object-fit: cover;
-        aspect-ratio: 1 / 1;
+        object-position: center;
         border-radius: 2px;
       }
 
@@ -345,8 +351,8 @@
 
         .meta-line {
           padding-top: 24px;
-          font-size: 16px;
-          line-height: 25px;
+          font-size: 19px;
+          line-height: 28px;
         }
 
         .lead,
@@ -401,8 +407,8 @@
 
         .meta-line {
           padding-top: 26px;
-          font-size: 18px;
-          line-height: 27px;
+          font-size: 21px;
+          line-height: 30px;
         }
 
         .lead,
@@ -534,27 +540,31 @@
           <div class="gallery">
             <img
               src="hinh-1.png"
+              width="1024"
+              height="578"
               alt="Khu trải nghiệm Welcome to Galaxy tại Expo Day"
-              loading="lazy"
             />
             <img
               src="hinh-2.png"
+              width="1024"
+              height="578"
               alt="Khu #GalaxyPlay tại Expo Day"
-              loading="lazy"
             />
             <img
               src="hinh-3.jpg"
+              width="1024"
+              height="578"
               alt="Khu Nightography tại Expo Day"
-              loading="lazy"
             />
             <img
               src="hinh-4.png"
+              width="1024"
+              height="578"
               alt="Khu #GalaxyCamera tại Expo Day"
-              loading="lazy"
             />
           </div>
 
-          <p class="meta-line">✨ Đêm nhạc Welcome To Galaxy</p>
+          <p class="meta-line">✨ Đêm nhạc Welcome To Galaxy: 22/11/2026</p>
           <figure class="poster">
             <img
               src="kv-show-16.jpg"
