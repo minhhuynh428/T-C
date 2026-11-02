@@ -125,49 +125,13 @@
       }
 
       .layout {
-        width: min(1080px, calc(100% - 32px));
+        width: min(var(--article), calc(100% - 32px));
         margin: 0 auto;
         padding-bottom: 96px;
       }
 
-      .toc {
-        display: flex;
-        gap: 8px;
-        margin: 0 -16px 8px;
-        padding: 8px 16px 12px;
-        overflow-x: auto;
-        position: sticky;
-        top: var(--header);
-        z-index: 9;
-        background: rgba(21, 21, 21, 0.94);
-        backdrop-filter: blur(12px);
-        scrollbar-width: none;
-      }
-
-      .toc::-webkit-scrollbar {
-        display: none;
-      }
-
-      .toc a {
-        flex: 0 0 auto;
-        color: var(--muted);
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 500;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        padding: 8px 2px 10px;
-        border-bottom: 2px solid transparent;
-      }
-
-      .toc a:hover,
-      .toc a[aria-current="true"] {
-        color: var(--text);
-        border-bottom-color: var(--accent);
-      }
-
       .article {
-        width: min(100%, var(--article));
+        width: 100%;
         margin: 0 auto;
       }
 
@@ -350,7 +314,7 @@
 
       section[id],
       h4[id] {
-        scroll-margin-top: 132px;
+        scroll-margin-top: 88px;
       }
 
       h3 {
@@ -432,45 +396,6 @@
           padding: 0 32px;
         }
 
-        .layout {
-          display: grid;
-          grid-template-columns: 210px minmax(0, var(--article));
-          justify-content: center;
-          column-gap: 48px;
-          width: min(1080px, calc(100% - 64px));
-        }
-
-        .toc {
-          position: sticky;
-          top: calc(var(--header) + 28px);
-          display: flex;
-          flex-direction: column;
-          gap: 2px;
-          margin: 36px 0 0;
-          padding: 0;
-          overflow: visible;
-          background: transparent;
-          backdrop-filter: none;
-        }
-
-        .toc a {
-          padding: 7px 0;
-          border-bottom: 0;
-          border-left: 2px solid transparent;
-          padding-left: 12px;
-        }
-
-        .toc a:hover,
-        .toc a[aria-current="true"] {
-          border-bottom-color: transparent;
-          border-left-color: var(--accent);
-        }
-
-        section[id],
-        h4[id] {
-          scroll-margin-top: 96px;
-        }
-
         h1 {
           margin-top: 36px;
           font-size: 32px;
@@ -486,7 +411,6 @@
 
       @media print {
         .topbar,
-        .toc,
         .to-top {
           display: none;
         }
@@ -513,20 +437,6 @@
     </header>
 
     <div class="layout">
-      <nav class="toc" aria-label="Mục lục">
-        <a href="#thong-tin">Thông tin</a>
-        <a href="#doi-tuong">Đối tượng</a>
-        <a href="#ve">Vé</a>
-        <a href="#check-in">Check-in</a>
-        <a href="#suc-khoe">Sức khỏe</a>
-        <a href="#tu-trang">Tư trang</a>
-        <a href="#do-cam">Đồ cấm</a>
-        <a href="#gian-lan">Gian lận</a>
-        <a href="#samsung">Samsung</a>
-        <a href="#bat-kha-khang">Bất khả kháng</a>
-        <a href="#bao-mat">Bảo mật</a>
-      </nav>
-
       <article class="article" id="noi-dung">
         <header>
           <h1>Điều khoản &amp; chính sách | Welcome To Galaxy</h1>
@@ -823,43 +733,7 @@
     </button>
 
     <script>
-      const tocLinks = [...document.querySelectorAll(".toc a")];
-      const sections = tocLinks
-        .map((link) => document.querySelector(link.getAttribute("href")))
-        .filter(Boolean);
       const toTop = document.querySelector(".to-top");
-
-      const toc = document.querySelector(".toc");
-
-      const setCurrent = (id) => {
-        tocLinks.forEach((link) => {
-          const active = link.getAttribute("href") === "#" + id;
-          if (active) {
-            link.setAttribute("aria-current", "true");
-            if (toc.scrollWidth > toc.clientWidth + 8) {
-              const linkBox = link.getBoundingClientRect();
-              const tocBox = toc.getBoundingClientRect();
-              toc.scrollLeft +=
-                linkBox.left - tocBox.left - (tocBox.width - linkBox.width) / 2;
-            }
-          } else {
-            link.removeAttribute("aria-current");
-          }
-        });
-      };
-
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            const visible = entries
-              .filter((entry) => entry.isIntersecting)
-              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-            if (visible) setCurrent(visible.target.id);
-          },
-          { rootMargin: "-30% 0px -55% 0px", threshold: [0.1, 0.4] }
-        );
-        sections.forEach((section) => observer.observe(section));
-      }
 
       const onScroll = () => {
         toTop.hidden = window.scrollY < 480;
