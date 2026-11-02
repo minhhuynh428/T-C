@@ -3,18 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Điều khoản &amp; Chính sách | Welcome To Galaxy</title>
+    <title>Thông tin tham dự đại sự kiện Welcome To Galaxy</title>
     <meta
       name="description"
       content="Điều kiện và điều khoản tham gia đêm nhạc Welcome To Galaxy, 22/11/2026 tại SECC, TP.HCM."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <style>
+      @font-face {
+        font-family: "Samsung Sharp Sans";
+        src: url("fonts/SamsungSharpSans-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung Sharp Sans";
+        src: url("fonts/SamsungSharpSans-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung Sharp Sans";
+        src: url("fonts/SamsungSharpSans-Bold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung Sharp Sans";
+        src: url("fonts/SamsungSharpSans-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung One";
+        src: url("fonts/SamsungOne-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung One";
+        src: url("fonts/SamsungOne-500.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung One";
+        src: url("fonts/SamsungOne-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Samsung One";
+        src: url("fonts/SamsungOne-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
       :root {
         --bg: #151515;
         --text: #eeeeee;
@@ -38,7 +96,7 @@
         margin: 0;
         background: var(--bg);
         color: var(--text);
-        font-family: "Be Vietnam Pro", "Noto Sans", "Segoe UI", sans-serif;
+        font-family: "Samsung Sharp Sans", sans-serif;
         font-size: 17px;
         line-height: 28px;
         font-weight: 400;
@@ -74,6 +132,13 @@
       .skip:focus {
         transform: none;
         top: 12px;
+      }
+
+      .topbar,
+      .topbar .brand,
+      .topbar .brand strong,
+      .topbar-note {
+        font-family: "Samsung One", "Samsung Sharp Sans", sans-serif;
       }
 
       .topbar {
@@ -140,6 +205,7 @@
       h3,
       h4,
       .venue {
+        font-family: "Samsung One", "Samsung Sharp Sans", sans-serif;
         text-transform: uppercase;
       }
 
@@ -181,78 +247,10 @@
         margin: 28px 0 0;
       }
 
-      .poster-inner,
-      .board {
-        position: relative;
-        overflow: hidden;
-        border-radius: 2px;
-        background:
-          radial-gradient(circle at 20% 18%, rgba(176, 52, 26, 0.45), transparent 28%),
-          radial-gradient(circle at 80% 0%, rgba(90, 140, 255, 0.28), transparent 26%),
-          linear-gradient(180deg, #1c2433 0%, #101216 58%, #0c0c0c 100%);
-      }
-
-      .poster-inner {
-        min-height: 460px;
-        padding: 36px 28px 32px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-
-      .poster-inner::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-          radial-gradient(circle, rgba(255, 255, 255, 0.85) 0 1px, transparent 1.4px),
-          radial-gradient(circle, rgba(255, 255, 255, 0.45) 0 1px, transparent 1.2px);
-        background-size: 120px 140px, 80px 96px;
-        background-position: 12px 20px, 40px 60px;
-        opacity: 0.55;
-        pointer-events: none;
-      }
-
-      .poster-kicker,
-      .poster-title,
-      .poster-date,
-      .poster-place,
-      .poster-time {
-        position: relative;
-        margin: 0;
-      }
-
-      .poster-kicker {
-        color: rgba(238, 238, 238, 0.72);
-        font-size: 12px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      .poster-title {
-        margin-top: 12px;
-        font-size: clamp(40px, 8vw, 64px);
-        font-weight: 600;
-        line-height: 0.95;
-        letter-spacing: -0.03em;
-      }
-
-      .poster-date {
-        margin-top: 22px;
-        font-size: clamp(28px, 5vw, 40px);
-        font-weight: 500;
-        letter-spacing: 0.08em;
-      }
-
-      .poster-place,
-      .poster-time {
-        color: rgba(238, 238, 238, 0.86);
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      .poster-place {
-        margin-top: 8px;
+      .poster img {
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       .board {
@@ -381,10 +379,6 @@
           column-gap: 28px;
         }
 
-        .poster-inner {
-          min-height: 560px;
-          padding: 48px 40px 40px;
-        }
       }
 
       @media (min-width: 980px) {
@@ -439,7 +433,7 @@
     <div class="layout">
       <article class="article" id="noi-dung">
         <header>
-          <h1>Điều khoản &amp; chính sách | Welcome To Galaxy</h1>
+          <h1>Thông tin tham dự đại sự kiện Welcome To Galaxy</h1>
           <p class="published">2026.11.02</p>
           <h2>Welcome To Galaxy</h2>
           <p class="venue">
@@ -449,13 +443,10 @@
         </header>
 
         <figure class="poster">
-          <div class="poster-inner">
-            <p class="poster-kicker">Đêm nhạc · Không bán vé</p>
-            <p class="poster-title">Welcome<br />to Galaxy</p>
-            <p class="poster-date">22 / 11 / 2026</p>
-            <p class="poster-place">SECC · 799 Nguyễn Văn Linh · Tân Mỹ</p>
-            <p class="poster-time">Check-in 14:00 · Bắt đầu 18:00</p>
-          </div>
+          <img
+            src="welcome-to-galaxy.jpg"
+            alt="Welcome To Galaxy Festival. Galaxy Run ngày 21–22/11/2026, Galaxy Concert 18:00–22:00 ngày 22/11/2026 tại SECC, 799 Nguyễn Văn Linh, phường Tân Mỹ, TP. Hồ Chí Minh."
+          />
         </figure>
 
         <section class="board" aria-labelledby="tom-tat">
