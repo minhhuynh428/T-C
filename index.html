@@ -1,11 +1,874 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
-</head>
-<body>
-  <h1>Hello World</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điều khoản &amp; Chính sách | Welcome To Galaxy</title>
+    <meta
+      name="description"
+      content="Điều kiện và điều khoản tham gia đêm nhạc Welcome To Galaxy, 22/11/2026 tại SECC, TP.HCM."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #151515;
+        --text: #eeeeee;
+        --muted: #999999;
+        --accent: #b0341a;
+        --mark: #e7a090;
+        --line: rgba(238, 238, 238, 0.14);
+        --header: 64px;
+        --article: 680px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Be Vietnam Pro", "Noto Sans", "Segoe UI", sans-serif;
+        font-size: 17px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        color: var(--mark);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--mark);
+        outline-offset: 3px;
+      }
+
+      .skip {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        z-index: 20;
+        transform: translateY(-120%);
+        background: #fff;
+        color: #151515;
+        padding: 8px 12px;
+        border-radius: 6px;
+      }
+
+      .skip:focus {
+        transform: none;
+        top: 12px;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: var(--header);
+        padding: 0 20px;
+        background: rgba(21, 21, 21, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid transparent;
+      }
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        text-decoration: none;
+        line-height: 1.1;
+      }
+
+      .brand:hover {
+        color: var(--text);
+      }
+
+      .brand strong {
+        color: var(--accent);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .topbar-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        letter-spacing: 0.04em;
+      }
+
+      .layout {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding-bottom: 96px;
+      }
+
+      .toc {
+        display: flex;
+        gap: 8px;
+        margin: 0 -16px 8px;
+        padding: 8px 16px 12px;
+        overflow-x: auto;
+        position: sticky;
+        top: var(--header);
+        z-index: 9;
+        background: rgba(21, 21, 21, 0.94);
+        backdrop-filter: blur(12px);
+        scrollbar-width: none;
+      }
+
+      .toc::-webkit-scrollbar {
+        display: none;
+      }
+
+      .toc a {
+        flex: 0 0 auto;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 8px 2px 10px;
+        border-bottom: 2px solid transparent;
+      }
+
+      .toc a:hover,
+      .toc a[aria-current="true"] {
+        color: var(--text);
+        border-bottom-color: var(--accent);
+      }
+
+      .article {
+        width: min(100%, var(--article));
+        margin: 0 auto;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .venue {
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 28px 0 12px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 34px;
+        letter-spacing: -0.02em;
+        text-align: left;
+      }
+
+      .published {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      h2 {
+        margin: 28px 0 0;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+      }
+
+      .venue {
+        margin: 0;
+        padding-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      .poster,
+      .board {
+        margin: 28px 0 0;
+      }
+
+      .poster-inner,
+      .board {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2px;
+        background:
+          radial-gradient(circle at 20% 18%, rgba(176, 52, 26, 0.45), transparent 28%),
+          radial-gradient(circle at 80% 0%, rgba(90, 140, 255, 0.28), transparent 26%),
+          linear-gradient(180deg, #1c2433 0%, #101216 58%, #0c0c0c 100%);
+      }
+
+      .poster-inner {
+        min-height: 460px;
+        padding: 36px 28px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .poster-inner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle, rgba(255, 255, 255, 0.85) 0 1px, transparent 1.4px),
+          radial-gradient(circle, rgba(255, 255, 255, 0.45) 0 1px, transparent 1.2px);
+        background-size: 120px 140px, 80px 96px;
+        background-position: 12px 20px, 40px 60px;
+        opacity: 0.55;
+        pointer-events: none;
+      }
+
+      .poster-kicker,
+      .poster-title,
+      .poster-date,
+      .poster-place,
+      .poster-time {
+        position: relative;
+        margin: 0;
+      }
+
+      .poster-kicker {
+        color: rgba(238, 238, 238, 0.72);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .poster-title {
+        margin-top: 12px;
+        font-size: clamp(40px, 8vw, 64px);
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+      }
+
+      .poster-date {
+        margin-top: 22px;
+        font-size: clamp(28px, 5vw, 40px);
+        font-weight: 500;
+        letter-spacing: 0.08em;
+      }
+
+      .poster-place,
+      .poster-time {
+        color: rgba(238, 238, 238, 0.86);
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .poster-place {
+        margin-top: 8px;
+      }
+
+      .board {
+        padding: 28px 24px 12px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 80px),
+          #121212;
+        border: 1px solid var(--line);
+      }
+
+      .board h3 {
+        margin: 0 0 8px;
+        padding: 0;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--mark);
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+      }
+
+      .facts div {
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .facts dt {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .facts dd {
+        margin: 4px 0 0;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .lead,
+      p,
+      li {
+        font-size: 17px;
+        line-height: 28px;
+      }
+
+      .lead,
+      section p {
+        margin: 0;
+        padding-top: 12px;
+      }
+
+      section[id],
+      h4[id] {
+        scroll-margin-top: 132px;
+      }
+
+      h3 {
+        margin: 0;
+        padding-top: 36px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+
+      h4 {
+        margin: 0;
+        padding-top: 22px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 12px 0 0 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .mark {
+        color: var(--mark);
+        font-weight: 600;
+      }
+
+      .closing {
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+
+      .to-top {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        width: 48px;
+        height: 48px;
+        border: 0;
+        border-radius: 50%;
+        background: #0e0e0e;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+      }
+
+      .to-top[hidden] {
+        display: none;
+      }
+
+      .to-top:hover {
+        background: #242424;
+      }
+
+      @media (min-width: 720px) {
+        .facts {
+          grid-template-columns: 1fr 1fr;
+          column-gap: 28px;
+        }
+
+        .poster-inner {
+          min-height: 560px;
+          padding: 48px 40px 40px;
+        }
+      }
+
+      @media (min-width: 980px) {
+        :root {
+          --header: 72px;
+        }
+
+        .topbar {
+          padding: 0 32px;
+        }
+
+        .layout {
+          display: grid;
+          grid-template-columns: 210px minmax(0, var(--article));
+          justify-content: center;
+          column-gap: 48px;
+          width: min(1080px, calc(100% - 64px));
+        }
+
+        .toc {
+          position: sticky;
+          top: calc(var(--header) + 28px);
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          margin: 36px 0 0;
+          padding: 0;
+          overflow: visible;
+          background: transparent;
+          backdrop-filter: none;
+        }
+
+        .toc a {
+          padding: 7px 0;
+          border-bottom: 0;
+          border-left: 2px solid transparent;
+          padding-left: 12px;
+        }
+
+        .toc a:hover,
+        .toc a[aria-current="true"] {
+          border-bottom-color: transparent;
+          border-left-color: var(--accent);
+        }
+
+        section[id],
+        h4[id] {
+          scroll-margin-top: 96px;
+        }
+
+        h1 {
+          margin-top: 36px;
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      @media print {
+        .topbar,
+        .toc,
+        .to-top {
+          display: none;
+        }
+
+        body {
+          background: #fff;
+          color: #111;
+        }
+
+        .mark {
+          color: #8a2b16;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#noi-dung">Đi tới nội dung</a>
+    <header class="topbar">
+      <a class="brand" href="#noi-dung">
+        <strong>GALAXY</strong>
+        <span>Samsung · SEVT</span>
+      </a>
+      <p class="topbar-note">Điều khoản tham gia</p>
+    </header>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Mục lục">
+        <a href="#thong-tin">Thông tin</a>
+        <a href="#doi-tuong">Đối tượng</a>
+        <a href="#ve">Vé</a>
+        <a href="#check-in">Check-in</a>
+        <a href="#suc-khoe">Sức khỏe</a>
+        <a href="#tu-trang">Tư trang</a>
+        <a href="#do-cam">Đồ cấm</a>
+        <a href="#gian-lan">Gian lận</a>
+        <a href="#samsung">Samsung</a>
+        <a href="#bat-kha-khang">Bất khả kháng</a>
+        <a href="#bao-mat">Bảo mật</a>
+      </nav>
+
+      <article class="article" id="noi-dung">
+        <header>
+          <h1>Điều khoản &amp; chính sách | Welcome To Galaxy</h1>
+          <p class="published">2026.11.02</p>
+          <h2>Welcome To Galaxy</h2>
+          <p class="venue">
+            Ngày 22.11.2026 tại Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC),
+            Thành phố Hồ Chí Minh
+          </p>
+        </header>
+
+        <figure class="poster">
+          <div class="poster-inner">
+            <p class="poster-kicker">Đêm nhạc · Không bán vé</p>
+            <p class="poster-title">Welcome<br />to Galaxy</p>
+            <p class="poster-date">22 / 11 / 2026</p>
+            <p class="poster-place">SECC · 799 Nguyễn Văn Linh · Tân Mỹ</p>
+            <p class="poster-time">Check-in 14:00 · Bắt đầu 18:00</p>
+          </div>
+        </figure>
+
+        <section class="board" aria-labelledby="tom-tat">
+          <h3 id="tom-tat">Thông tin đêm nhạc</h3>
+          <dl class="facts">
+            <div>
+              <dt>Địa điểm</dt>
+              <dd>SECC, 799 Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM</dd>
+            </div>
+            <div>
+              <dt>Check-in</dt>
+              <dd>14:00, ngày 22/11/2026</dd>
+            </div>
+            <div>
+              <dt>Bắt đầu</dt>
+              <dd>18:00, ngày 22/11/2026</dd>
+            </div>
+            <div>
+              <dt>Độ tuổi</dt>
+              <dd>Công dân Việt Nam, từ đủ 16 tuổi</dd>
+            </div>
+            <div>
+              <dt>Vé</dt>
+              <dd>Không bán vé. Vé được cấp theo thể lệ chương trình.</dd>
+            </div>
+            <div>
+              <dt>Đối tượng</dt>
+              <dd>Khách hàng cá nhân. Không áp dụng cho mục đích thương mại.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <p class="lead">
+          Công ty TNHH Samsung Electronics Việt Nam Thái Nguyên – Chi nhánh HCM
+          (SEVT) xin trân trọng thông báo chương trình như sau:
+        </p>
+
+        <section id="thong-tin" aria-labelledby="h-thong-tin">
+          <h3 id="h-thong-tin">1. Thông tin về đêm nhạc Welcome To Galaxy</h3>
+          <ul>
+            <li>
+              Địa điểm: Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC), 799
+              Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
+            </li>
+            <li>Thời gian check-in: 14:00, ngày 22/11/2026.</li>
+            <li>Thời gian bắt đầu: 18:00, ngày 22/11/2026.</li>
+            <li>
+              <span class="mark">Đây là sự kiện không bán vé.</span> Vé tham dự
+              được cấp theo thể lệ và điều kiện của chương trình.
+            </li>
+          </ul>
+        </section>
+
+        <section id="doi-tuong" aria-labelledby="h-doi-tuong">
+          <h3 id="h-doi-tuong">2. Đối tượng tham gia hoạt động</h3>
+          <ul>
+            <li>
+              <span class="mark">Công dân Việt Nam, từ đủ 16 tuổi trở lên.</span>
+            </li>
+            <li>
+              Áp dụng cho khách hàng cá nhân; không áp dụng cho tổ chức, đại lý
+              hoặc bên mua lại với mục đích thương mại.
+            </li>
+          </ul>
+        </section>
+
+        <section id="ve" aria-labelledby="h-ve">
+          <h3 id="h-ve">3. Quy định về vé tham dự sự kiện</h3>
+          <p>Vé tham dự đêm nhạc:</p>
+          <ul>
+            <li>Không được quy đổi thành tiền mặt.</li>
+            <li>
+              <span class="mark">Không được chuyển nhượng dưới mọi hình thức</span>
+              (trừ khi có quy định khác từ Samsung).
+            </li>
+          </ul>
+          <p>Ban tổ chức có quyền từ chối quyền tham dự, yêu cầu rời khỏi địa điểm nếu:</p>
+          <ul>
+            <li>Khách hàng không cung cấp đủ thông tin xác minh.</li>
+            <li>Vé không hợp lệ hoặc có dấu hiệu gian lận.</li>
+            <li>
+              Khách hàng có hành vi không phù hợp, gây rối hoặc không tuân thủ
+              quy định của chương trình.
+            </li>
+          </ul>
+        </section>
+
+        <section id="tham-gia" aria-labelledby="h-tham-gia">
+          <h3 id="h-tham-gia">4. Quy định tham gia đêm nhạc Welcome To Galaxy</h3>
+
+          <h4 id="check-in">a) Quy định check-in</h4>
+          <ul>
+            <li>
+              Khách hàng có trách nhiệm xếp hàng trật tự, tuân thủ hướng dẫn của
+              Ban Tổ Chức và không chen lấn, xô đẩy trong quá trình check-in và
+              vào khu vực sự kiện.
+            </li>
+            <li>
+              <span class="mark">01 vé điện tử có mã QR hợp lệ chỉ có giá trị cho 01 người tham dự</span>,
+              không áp dụng cho trẻ em hoặc người chưa thành niên đi kèm.
+            </li>
+            <li>
+              Khách hàng dùng vé điện tử có mã QR hợp lệ để check-in tại cổng
+              vào khu vực sự kiện.
+            </li>
+            <li>
+              Hệ thống tự động xác nhận kết quả check-in (thành công hoặc không
+              thành công) ngay sau khi quét mã.
+            </li>
+            <li>
+              <span class="mark">Mỗi mã QR chỉ có giá trị sử dụng 01 lần.</span>
+              Các mã đã được sử dụng hoặc trùng lặp sẽ không hợp lệ.
+            </li>
+            <li>
+              Nếu mã QR không hợp lệ, đã được sử dụng hoặc không tồn tại trên hệ
+              thống, khách hàng không đủ điều kiện tham gia sự kiện. Ban Tổ Chức
+              có quyền kiểm tra và đối soát thông tin để xác thực điều kiện vào
+              cổng.
+            </li>
+            <li>
+              Ban Tổ Chức không chịu trách nhiệm nếu khách hàng làm mất, xoá
+              hoặc không thể cung cấp vé điện tử có mã QR hợp lệ tại thời điểm
+              check-in.
+            </li>
+            <li>
+              <span class="mark">Ban Tổ Chức có quyền từ chối tham gia nếu khách hàng đến sau thời gian check-in theo quy định.</span>
+            </li>
+          </ul>
+
+          <h4 id="suc-khoe">b) Quy định về sức khỏe</h4>
+          <ul>
+            <li>
+              Phụ nữ mang thai và người có vấn đề về sức khỏe được khuyến nghị
+              cân nhắc tình trạng sức khỏe của bản thân trước khi quyết định
+              tham dự sự kiện.
+            </li>
+            <li>
+              Khi tham dự, khán giả có trách nhiệm chủ động theo dõi và bảo vệ
+              sức khỏe của bản thân, đồng thời cân nhắc các yếu tố có thể ảnh
+              hưởng đến sức khỏe, bao gồm điều kiện thời tiết bất lợi trước,
+              trong và sau sự kiện; tình trạng sức khỏe hiện có; và các rủi ro
+              phát sinh khi di chuyển đến hoặc rời khỏi địa điểm tổ chức.
+            </li>
+            <li>
+              Ban Tổ Chức không chịu trách nhiệm đối với các vấn đề sức khỏe
+              phát sinh từ tình trạng bệnh lý có sẵn của khán giả hoặc các
+              nguyên nhân nằm ngoài phạm vi kiểm soát hợp lý của Ban Tổ Chức.
+            </li>
+            <li>
+              Việc tham dự sự kiện đồng nghĩa khách hàng đồng ý uỷ quyền để Ban
+              Tổ Chức hỗ trợ sơ cứu và/hoặc sắp xếp vận chuyển đến cơ sở y tế
+              phù hợp khi cần thiết.
+              <span class="mark">Khách hàng tự thanh toán toàn bộ chi phí chăm sóc y tế và vận chuyển (nếu có).</span>
+            </li>
+          </ul>
+
+          <h4 id="tu-trang">c) Quy định bảo quản tư trang</h4>
+          <ul>
+            <li>
+              Sự kiện không bố trí khu vực giữ hoặc ký gửi hành lý, tư trang.
+              Khán giả có trách nhiệm tự bảo quản đồ dùng và tài sản cá nhân
+              trong suốt thời gian tham dự.
+            </li>
+            <li>
+              Ban Tổ Chức không chịu trách nhiệm đối với các trường hợp thất
+              lạc, mất cắp, hư hỏng tài sản cá nhân hoặc các sự cố phát sinh do
+              sơ suất của khán giả, dù xảy ra bên trong hay bên ngoài khu vực
+              tổ chức sự kiện.
+            </li>
+          </ul>
+
+          <h4 id="do-cam">d) Đồ dùng và thiết bị không được phép</h4>
+          <p>Các đồ dùng và thiết bị sau không được phép sử dụng trong khu vực sự kiện:</p>
+          <ul>
+            <li>
+              Balo hoặc túi xách có kích thước
+              <span class="mark">lớn hơn 25cm x 35cm</span>.
+            </li>
+            <li>
+              Chất cấm (chất kích thích), nước uống có cồn, thuốc lá, thuốc lá
+              điện tử.
+            </li>
+            <li>
+              Vũ khí dưới bất kỳ hình thức nào: đèn pin, đèn laser, các vật
+              nhọn, viết, ô dù, chân máy chụp ảnh monopod, gậy selfie.
+            </li>
+            <li>
+              Áp phích, băng cổ vũ, bảng chỉ dẫn mang tính chất chính trị, kích
+              động, ngôn từ không phù hợp thuần phong mỹ tục, và banner
+              <span class="mark">lớn hơn 15cm x 40cm</span>.
+            </li>
+            <li>Các loại động vật và thú nuôi.</li>
+            <li>Bật lửa, nến, pháo bông và các chất phát nổ.</li>
+            <li>
+              Chai thủy tinh, chai nhựa, chai nhôm, lọ thiếc hay các vật chứa
+              nhựa cứng.
+            </li>
+            <li>Thức ăn, đồ uống, ghế ngồi cá nhân mang từ bên ngoài buổi diễn.</li>
+            <li>
+              Bất kỳ vật dụng dễ bốc cháy như rượu, nước hoa, chai xịt khử mùi
+              cơ thể, xăng dầu.
+            </li>
+          </ul>
+        </section>
+
+        <section id="gian-lan" aria-labelledby="h-gian-lan">
+          <h3 id="h-gian-lan">5. Quy định về hành vi gian lận</h3>
+          <p>Ban Tổ Chức có quyền từ chối quyền tham dự trong các trường hợp:</p>
+          <ul>
+            <li>Gian lận hoặc có dấu hiệu gian lận.</li>
+            <li>Lợi dụng chương trình để trục lợi.</li>
+            <li>Vi phạm bất kỳ điều khoản nào của chương trình.</li>
+          </ul>
+        </section>
+
+        <section id="samsung" aria-labelledby="h-samsung">
+          <h3 id="h-samsung">6. Quyền và trách nhiệm của Samsung</h3>
+          <p>Samsung có quyền:</p>
+          <ul>
+            <li>Thay đổi nội dung chương trình.</li>
+            <li>Chấm dứt chương trình trước thời hạn trong trường hợp cần thiết.</li>
+          </ul>
+          <p>Mọi thay đổi sẽ được thông báo phù hợp đến khách hàng.</p>
+        </section>
+
+        <section id="bat-kha-khang" aria-labelledby="h-bat-kha-khang">
+          <h3 id="h-bat-kha-khang">7. Điều khoản bất khả kháng</h3>
+          <p>
+            Trong trường hợp xảy ra các sự kiện ngoài tầm kiểm soát (bao gồm
+            nhưng không giới hạn: thiên tai, dịch bệnh, chiến tranh, quyết định
+            của cơ quan nhà nước…), Samsung có quyền thay đổi, tạm hoãn hoặc hủy
+            bỏ chương trình mà không phải chịu trách nhiệm bồi thường.
+          </p>
+        </section>
+
+        <section id="bao-mat" aria-labelledby="h-bao-mat">
+          <h3 id="h-bao-mat">8. Bảo mật thông tin</h3>
+          <ul>
+            <li>
+              Thông tin khách hàng cung cấp sẽ được sử dụng cho mục đích vận
+              hành chương trình và các hoạt động liên quan.
+            </li>
+            <li>
+              Samsung cam kết bảo mật thông tin theo quy định pháp luật hiện
+              hành.
+            </li>
+          </ul>
+        </section>
+
+        <section class="closing" aria-label="Xác nhận điều khoản">
+          <p>
+            Bằng việc tham gia chương trình, khách hàng đồng ý với toàn bộ Điều
+            khoản &amp; Điều kiện này. Trong mọi trường hợp,
+            <span class="mark">quyết định của Samsung là quyết định cuối cùng</span>.
+          </p>
+          <p>
+            Mọi thắc mắc chi tiết về chương trình, vui lòng liên hệ
+            <a href="https://www.facebook.com/SamsungVietnam">Samsung Vietnam Fanpage</a>.
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <button class="to-top" type="button" hidden aria-label="Lên đầu trang">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+        <path
+          d="M9 4.5 3.5 10M9 4.5 14.5 10M9 4.5V14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script>
+      const tocLinks = [...document.querySelectorAll(".toc a")];
+      const sections = tocLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+      const toTop = document.querySelector(".to-top");
+
+      const toc = document.querySelector(".toc");
+
+      const setCurrent = (id) => {
+        tocLinks.forEach((link) => {
+          const active = link.getAttribute("href") === "#" + id;
+          if (active) {
+            link.setAttribute("aria-current", "true");
+            if (toc.scrollWidth > toc.clientWidth + 8) {
+              const linkBox = link.getBoundingClientRect();
+              const tocBox = toc.getBoundingClientRect();
+              toc.scrollLeft +=
+                linkBox.left - tocBox.left - (tocBox.width - linkBox.width) / 2;
+            }
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      };
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (visible) setCurrent(visible.target.id);
+          },
+          { rootMargin: "-30% 0px -55% 0px", threshold: [0.1, 0.4] }
+        );
+        sections.forEach((section) => observer.observe(section));
+      }
+
+      const onScroll = () => {
+        toTop.hidden = window.scrollY < 480;
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      toTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
 </html>
