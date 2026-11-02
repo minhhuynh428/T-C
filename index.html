@@ -134,65 +134,11 @@
         top: 12px;
       }
 
-      .topbar,
-      .topbar .brand,
-      .topbar .brand strong,
-      .topbar-note {
-        font-family: "Samsung Sharp Sans", "Samsung One", sans-serif;
-      }
-
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        min-height: var(--header);
-        padding: 0 20px;
-        background: rgba(21, 21, 21, 0.92);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid transparent;
-      }
-
-      .brand {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        text-decoration: none;
-        line-height: 1.1;
-      }
-
-      .brand:hover {
-        color: var(--text);
-      }
-
-      .brand strong {
-        color: var(--accent);
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-      }
-
-      .brand span {
-        color: var(--muted);
-        font-size: 11px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .topbar-note {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-        letter-spacing: 0.04em;
-      }
-
+      /* ─── Layout ─── */
       .layout {
-        width: min(var(--article), calc(100% - 32px));
+        width: min(var(--article), calc(100% - 40px));
         margin: 0 auto;
-        padding-bottom: 96px;
+        padding-bottom: 72px;
       }
 
       .article {
@@ -200,30 +146,31 @@
         margin: 0 auto;
       }
 
+      /* ─── Headings: font + uppercase ─── */
       h1,
-      h2,
       h3,
-      h4,
-      .venue {
+      h4 {
         font-family: "Samsung Sharp Sans", "Samsung One", sans-serif;
         text-transform: uppercase;
       }
 
+      /* ─── H1 (mobile-first: 25px) ─── */
       h1 {
-        margin: 28px 0 12px;
-        font-size: 28px;
+        margin: 28px 0 10px;
+        font-size: 25px;
         font-weight: 600;
-        line-height: 34px;
-        letter-spacing: -0.02em;
+        line-height: 36px;
+        letter-spacing: -0.01em;
         text-align: center;
       }
 
+      /* Date tag inside H1 */
       .published {
         display: block;
-        margin: 10px 0;
+        margin: 8px 0;
         color: var(--muted);
         font-family: "Samsung One", sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 18px;
         letter-spacing: normal;
@@ -231,143 +178,135 @@
         text-transform: none;
       }
 
-      h2 {
-        margin: 28px 0 0;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 28px;
-        text-align: center;
+      /* ─── Images ─── */
+      .poster {
+        margin: 24px 0 0;
       }
 
-      .venue {
+      .program {
         margin: 0;
-        padding-top: 20px;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 26px;
-        text-align: center;
-      }
-
-      .poster,
-      .board {
-        margin: 28px 0 0;
       }
 
       .poster img {
         display: block;
         width: 100%;
         height: auto;
+        border-radius: 2px;
       }
 
-      .board {
-        padding: 28px 24px 12px;
-        background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 80px),
-          #121212;
-        border: 1px solid var(--line);
-      }
-
-      .board h3 {
-        margin: 0 0 8px;
-        padding: 0;
-        font-size: 13px;
+      /* ─── Emoji section lines ─── */
+      .meta-line {
+        margin: 0;
+        padding-top: 22px;
+        font-size: 15px;
         font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--mark);
+        line-height: 23px;
       }
 
-      .facts {
+      .program > .meta-line:first-of-type {
+        padding-top: 18px;
+      }
+
+      /* ─── Gallery 2×2 ─── */
+      .gallery {
         display: grid;
-        grid-template-columns: 1fr;
-        margin: 0;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-top: 10px;
       }
 
-      .facts div {
-        padding: 14px 0;
-        border-top: 1px solid var(--line);
+      .gallery img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        border-radius: 2px;
       }
 
-      .facts dt {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 18px;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      .facts dd {
-        margin: 4px 0 0;
-        font-size: 16px;
-        line-height: 24px;
-      }
-
+      /* ─── Body text ─── */
       .lead,
       p,
       li {
-        font-size: 17px;
-        line-height: 28px;
+        font-size: 15px;
+        line-height: 25px;
       }
 
       .lead,
       section p {
         margin: 0;
-        padding-top: 12px;
+        padding-top: 10px;
       }
 
+      /* ─── Scroll anchors ─── */
       section[id],
+      h3[id],
       h4[id] {
-        scroll-margin-top: 88px;
+        scroll-margin-top: 16px;
       }
 
+      /* ─── H3 section headings ─── */
       h3 {
         margin: 0;
-        padding-top: 36px;
-        font-size: 20px;
+        padding-top: 32px;
+        font-size: 17px;
         font-weight: 500;
-        line-height: 28px;
+        line-height: 25px;
       }
 
+      /* ─── H4 sub-headings ─── */
       h4 {
         margin: 0;
-        padding-top: 22px;
-        font-size: 18px;
+        padding-top: 18px;
+        font-size: 15px;
         font-weight: 500;
-        line-height: 26px;
+        line-height: 23px;
       }
 
+      /* ─── Lists ─── */
       ul {
         margin: 0;
-        padding: 12px 0 0 22px;
+        padding: 10px 0 0 20px;
       }
 
       li + li {
-        margin-top: 8px;
+        margin-top: 6px;
       }
 
+      ul.sub-list {
+        margin-top: 6px;
+        padding-top: 0;
+      }
+
+      ul.sub-list li + li {
+        margin-top: 3px;
+      }
+
+      /* ─── Highlight ─── */
       .mark {
         color: var(--mark);
         font-weight: 600;
       }
 
+      /* ─── Closing block ─── */
       .closing {
         margin-top: 28px;
         padding-top: 20px;
         border-top: 1px solid var(--line);
       }
 
+      /* ─── Back-to-top button ─── */
       .to-top {
         position: fixed;
-        right: 16px;
-        bottom: 16px;
-        width: 48px;
-        height: 48px;
+        right: 14px;
+        bottom: 14px;
+        width: 44px;
+        height: 44px;
         border: 0;
         border-radius: 50%;
         background: #0e0e0e;
         color: #fff;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         cursor: pointer;
       }
 
@@ -379,26 +318,137 @@
         background: #242424;
       }
 
-      @media (min-width: 720px) {
-        .facts {
-          grid-template-columns: 1fr 1fr;
-          column-gap: 28px;
-        }
-      }
-
-      @media (min-width: 980px) {
-        :root {
-          --header: 72px;
-        }
-
-        .topbar {
-          padding: 0 32px;
+      /* ═══ Breakpoint: ≥ 600px (landscape phone / small tablet) ═══ */
+      @media (min-width: 600px) {
+        body {
+          font-size: 16px;
+          line-height: 27px;
         }
 
         h1 {
-          margin-top: 36px;
-          font-size: 32px;
-          line-height: 40px;
+          font-size: 30px;
+          line-height: 42px;
+          margin: 36px 0 12px;
+        }
+
+        h3 {
+          padding-top: 36px;
+          font-size: 19px;
+          line-height: 27px;
+        }
+
+        h4 {
+          padding-top: 20px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+
+        .meta-line {
+          padding-top: 24px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+
+        .lead,
+        p,
+        li {
+          font-size: 16px;
+          line-height: 27px;
+        }
+
+        ul {
+          padding-top: 11px;
+        }
+
+        li + li {
+          margin-top: 7px;
+        }
+
+        .gallery {
+          gap: 8px;
+          margin-top: 12px;
+        }
+
+        .layout {
+          padding-bottom: 80px;
+        }
+      }
+
+      /* ═══ Breakpoint: ≥ 980px (desktop) ═══ */
+      @media (min-width: 980px) {
+        body {
+          font-size: 17px;
+          line-height: 28px;
+        }
+
+        h1 {
+          margin-top: 48px;
+          font-size: 38px;
+          line-height: 52px;
+        }
+
+        h3 {
+          padding-top: 40px;
+          font-size: 21px;
+          line-height: 30px;
+        }
+
+        h4 {
+          padding-top: 22px;
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        .meta-line {
+          padding-top: 26px;
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        .lead,
+        p,
+        li {
+          font-size: 17px;
+          line-height: 28px;
+        }
+
+        .lead,
+        section p {
+          padding-top: 12px;
+        }
+
+        ul {
+          padding-top: 12px;
+          padding-left: 22px;
+        }
+
+        li + li {
+          margin-top: 8px;
+        }
+
+        .gallery {
+          gap: 10px;
+          margin-top: 14px;
+        }
+
+        .poster {
+          margin-top: 28px;
+        }
+
+        .layout {
+          padding-bottom: 96px;
+        }
+
+        .published {
+          font-size: 13px;
+          margin: 10px 0;
+        }
+
+        .to-top {
+          right: 16px;
+          bottom: 16px;
+          width: 48px;
+          height: 48px;
         }
       }
 
@@ -409,7 +459,6 @@
       }
 
       @media print {
-        .topbar,
         .to-top {
           display: none;
         }
@@ -427,13 +476,6 @@
   </head>
   <body>
     <a class="skip" href="#noi-dung">Đi tới nội dung</a>
-    <header class="topbar">
-      <a class="brand" href="#noi-dung">
-        <strong>GALAXY</strong>
-        <span>Samsung · SEVT</span>
-      </a>
-      <p class="topbar-note">Điều khoản tham gia</p>
-    </header>
 
     <div class="layout">
       <article class="article" id="noi-dung">
@@ -442,11 +484,6 @@
             Thông tin tham dự đại sự kiện <br />
             Welcome To Galaxy
           </h1>
-          <h2>Welcome To Galaxy</h2>
-          <p class="venue">
-            Ngày 22.11.2026 tại Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC),
-            Thành phố Hồ Chí Minh
-          </p>
         </header>
 
         <figure class="poster">
@@ -456,37 +493,79 @@
           />
         </figure>
 
-        <section class="board" aria-labelledby="tom-tat">
-          <h3 id="tom-tat">Thông tin đêm nhạc</h3>
-          <dl class="facts">
-            <div>
-              <dt>Địa điểm</dt>
-              <dd>SECC, 799 Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM</dd>
-            </div>
-            <div>
-              <dt>Check-in</dt>
-              <dd>14:00, ngày 22/11/2026</dd>
-            </div>
-            <div>
-              <dt>Bắt đầu</dt>
-              <dd>18:00, ngày 22/11/2026</dd>
-            </div>
-            <div>
-              <dt>Độ tuổi</dt>
-              <dd>Công dân Việt Nam, từ đủ 16 tuổi</dd>
-            </div>
-            <div>
-              <dt>Vé</dt>
-              <dd>Không bán vé. Vé được cấp theo thể lệ chương trình.</dd>
-            </div>
-            <div>
-              <dt>Đối tượng</dt>
-              <dd>
-                Khách hàng cá nhân. Không áp dụng cho mục đích thương mại.
-              </dd>
-            </div>
-          </dl>
+        <section class="program" aria-labelledby="galaxy-run">
+          <h3 id="galaxy-run">I. Galaxy Run</h3>
+
+          <p class="meta-line">🏃 Race Day: 22/11/2026</p>
+          <ul>
+            <li>
+              Địa điểm: Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC), 799 đường
+              Nguyễn Văn Linh, Khu đô thị Phú Mỹ Hưng, TP.HCM.
+            </li>
+            <li>
+              Galaxy Run 2026 đã sẵn sàng chào đón các runners, săn vé ngay tại:
+              <a
+                href="http://smsng.co/GalaxyRun-2026"
+                target="_blank"
+                rel="noopener"
+                >smsng.co/GalaxyRun-2026</a
+              >
+            </li>
+            <li>
+              Giá BIB niêm yết:
+              <ul class="sub-list">
+                <li>5KM: 199.000 VNĐ</li>
+                <li>10KM: 299.000 VNĐ</li>
+                <li>21KM: 399.000 VNĐ</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            Xem thông tin chi tiết tại
+            <a
+              href="https://www.facebook.com/share/r/1dQSSf1GHV/"
+              target="_blank"
+              rel="noopener"
+              >Fanpage Samsung Vietnam</a
+            >.
+          </p>
+
+          <p class="meta-line">📍 Expo Day: 22/11/2026</p>
+          <div class="gallery">
+            <img
+              src="hinh-1.png"
+              alt="Khu trải nghiệm Welcome to Galaxy tại Expo Day"
+              loading="lazy"
+            />
+            <img
+              src="hinh-2.png"
+              alt="Khu #GalaxyPlay tại Expo Day"
+              loading="lazy"
+            />
+            <img
+              src="hinh-3.jpg"
+              alt="Khu Nightography tại Expo Day"
+              loading="lazy"
+            />
+            <img
+              src="hinh-4.png"
+              alt="Khu #GalaxyCamera tại Expo Day"
+              loading="lazy"
+            />
+          </div>
+
+          <p class="meta-line">✨ Đêm nhạc Welcome To Galaxy</p>
+          <figure class="poster">
+            <img
+              src="kv-show-16.jpg"
+              alt="Welcome To Galaxy Festival. Galaxy Concert 18:00–22:00, 22/11/2026 tại SECC, 799 Nguyễn Văn Linh, Phường Tân Mỹ, TP. Hồ Chí Minh."
+            />
+          </figure>
         </section>
+
+        <h3 id="h-dieu-khoan">
+          II. Điều kiện điều khoản tham dự Đêm nhạc Welcome to Galaxy
+        </h3>
 
         <p class="lead">
           Công ty TNHH Samsung Electronics Việt Nam Thái Nguyên – Chi nhánh HCM
