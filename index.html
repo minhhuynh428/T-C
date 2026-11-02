@@ -294,6 +294,48 @@
         margin-top: 3px;
       }
 
+      .terms,
+      .terms h3,
+      .terms h4,
+      .terms p,
+      .terms li {
+        color: #fff;
+      }
+
+      ul.mix {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul.mix > li {
+        position: relative;
+        padding-left: 18px;
+      }
+
+      ul.mix > li::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+      }
+
+      ul.mix > li.sub {
+        margin-left: 20px;
+      }
+
+      ul.mix > li.sub::before {
+        content: "•";
+      }
+
+      ul.mix ul {
+        list-style: disc;
+        margin: 0;
+        padding: 8px 0 0 18px;
+      }
+
+      ul.mix ul li + li {
+        margin-top: 4px;
+      }
+
       /* ─── Highlight ─── */
       .mark {
         color: var(--mark);
@@ -580,267 +622,266 @@
         </section>
 
         <h3 id="h-dieu-khoan">
-          II. Điều kiện điều khoản tham dự Đêm nhạc Welcome to Galaxy
+          II. Điều kiện và điều khoản tham dự Đêm nhạc Welcome to Galaxy
         </h3>
 
-        <p class="lead">
-          Công ty TNHH Samsung Electronics Việt Nam Thái Nguyên – Chi nhánh HCM
-          (SEVT) xin trân trọng thông báo chương trình như sau:
-        </p>
-
-        <section id="thong-tin" aria-labelledby="h-thong-tin">
-          <h3 id="h-thong-tin">1. Thông tin về đêm nhạc Welcome To Galaxy</h3>
-          <ul>
-            <li>
-              Địa điểm: Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC), 799
-              Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
-            </li>
-            <li>Thời gian check-in: 14:00, ngày 22/11/2026.</li>
-            <li>Thời gian bắt đầu: 18:00, ngày 22/11/2026.</li>
-            <li>
-              <span class="mark">Đây là sự kiện không bán vé.</span> Vé tham dự
-              được cấp theo thể lệ và điều kiện của chương trình.
-            </li>
-          </ul>
-        </section>
-
-        <section id="doi-tuong" aria-labelledby="h-doi-tuong">
-          <h3 id="h-doi-tuong">2. Đối tượng tham gia hoạt động</h3>
-          <ul>
-            <li>
-              <span class="mark"
-                >Công dân Việt Nam, từ đủ 16 tuổi trở lên.</span
-              >
-            </li>
-            <li>
-              Áp dụng cho khách hàng cá nhân; không áp dụng cho tổ chức, đại lý
-              hoặc bên mua lại với mục đích thương mại.
-            </li>
-          </ul>
-        </section>
-
-        <section id="ve" aria-labelledby="h-ve">
-          <h3 id="h-ve">3. Quy định về vé tham dự sự kiện</h3>
-          <p>Vé tham dự đêm nhạc:</p>
-          <ul>
-            <li>Không được quy đổi thành tiền mặt.</li>
-            <li>
-              <span class="mark"
-                >Không được chuyển nhượng dưới mọi hình thức</span
-              >
-              (trừ khi có quy định khác từ Samsung).
-            </li>
-          </ul>
-          <p>
-            Ban tổ chức có quyền từ chối quyền tham dự, yêu cầu rời khỏi địa
-            điểm nếu:
+        <div class="terms">
+          <p class="lead">
+            Công ty TNHH Samsung Electronics Việt Nam Thái Nguyên – Chi nhánh
+            HCM (SEVT) xin trân trọng thông báo chương trình như sau:
           </p>
-          <ul>
-            <li>Khách hàng không cung cấp đủ thông tin xác minh.</li>
-            <li>Vé không hợp lệ hoặc có dấu hiệu gian lận.</li>
-            <li>
-              Khách hàng có hành vi không phù hợp, gây rối hoặc không tuân thủ
-              quy định của chương trình.
-            </li>
-          </ul>
-        </section>
 
-        <section id="tham-gia" aria-labelledby="h-tham-gia">
-          <h3 id="h-tham-gia">
-            4. Quy định tham gia đêm nhạc Welcome To Galaxy
-          </h3>
+          <section id="thong-tin" aria-labelledby="h-thong-tin">
+            <h3 id="h-thong-tin">
+              1. Thông tin về đêm nhạc Welcome To Galaxy:
+            </h3>
+            <ul class="mix">
+              <li>
+                Địa điểm: Trung tâm Hội chợ và Triển Lãm Sài Gòn (SECC), 799
+                Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
+              </li>
+              <li>Thời gian check-in: 14:00, ngày 22/11/2026</li>
+              <li>Thời gian bắt đầu: 18:00, ngày 22/11/2026</li>
+              <li>
+                Đây là sự kiện không bán vé. Vé tham dự được cấp theo thể lệ và
+                điều kiện của chương trình.
+              </li>
+            </ul>
+          </section>
 
-          <h4 id="check-in">a) Quy định check-in</h4>
-          <ul>
-            <li>
-              Khách hàng có trách nhiệm xếp hàng trật tự, tuân thủ hướng dẫn của
-              Ban Tổ Chức và không chen lấn, xô đẩy trong quá trình check-in và
-              vào khu vực sự kiện.
-            </li>
-            <li>
-              <span class="mark"
-                >01 vé điện tử có mã QR hợp lệ chỉ có giá trị cho 01 người tham
-                dự</span
-              >, không áp dụng cho trẻ em hoặc người chưa thành niên đi kèm.
-            </li>
-            <li>
-              Khách hàng dùng vé điện tử có mã QR hợp lệ để check-in tại cổng
-              vào khu vực sự kiện.
-            </li>
-            <li>
-              Hệ thống tự động xác nhận kết quả check-in (thành công hoặc không
-              thành công) ngay sau khi quét mã.
-            </li>
-            <li>
-              <span class="mark">Mỗi mã QR chỉ có giá trị sử dụng 01 lần.</span>
-              Các mã đã được sử dụng hoặc trùng lặp sẽ không hợp lệ.
-            </li>
-            <li>
-              Nếu mã QR không hợp lệ, đã được sử dụng hoặc không tồn tại trên hệ
-              thống, khách hàng không đủ điều kiện tham gia sự kiện. Ban Tổ Chức
-              có quyền kiểm tra và đối soát thông tin để xác thực điều kiện vào
-              cổng.
-            </li>
-            <li>
-              Ban Tổ Chức không chịu trách nhiệm nếu khách hàng làm mất, xoá
-              hoặc không thể cung cấp vé điện tử có mã QR hợp lệ tại thời điểm
-              check-in.
-            </li>
-            <li>
-              <span class="mark"
-                >Ban Tổ Chức có quyền từ chối tham gia nếu khách hàng đến sau
-                thời gian check-in theo quy định.</span
-              >
-            </li>
-          </ul>
+          <section id="doi-tuong" aria-labelledby="h-doi-tuong">
+            <h3 id="h-doi-tuong">2. Đối tượng tham gia hoạt động:</h3>
+            <ul class="mix">
+              <li>Công dân Việt Nam (Từ đủ 16 tuổi trở lên).</li>
+              <li>
+                Áp dụng cho khách hàng cá nhân; không áp dụng cho tổ chức, đại
+                lý hoặc bên mua lại với mục đích thương mại.
+              </li>
+            </ul>
+          </section>
 
-          <h4 id="suc-khoe">b) Quy định về sức khỏe</h4>
-          <ul>
-            <li>
-              Phụ nữ mang thai và người có vấn đề về sức khỏe được khuyến nghị
-              cân nhắc tình trạng sức khỏe của bản thân trước khi quyết định
-              tham dự sự kiện.
-            </li>
-            <li>
-              Khi tham dự, khán giả có trách nhiệm chủ động theo dõi và bảo vệ
-              sức khỏe của bản thân, đồng thời cân nhắc các yếu tố có thể ảnh
-              hưởng đến sức khỏe, bao gồm điều kiện thời tiết bất lợi trước,
-              trong và sau sự kiện; tình trạng sức khỏe hiện có; và các rủi ro
-              phát sinh khi di chuyển đến hoặc rời khỏi địa điểm tổ chức.
-            </li>
-            <li>
-              Ban Tổ Chức không chịu trách nhiệm đối với các vấn đề sức khỏe
-              phát sinh từ tình trạng bệnh lý có sẵn của khán giả hoặc các
-              nguyên nhân nằm ngoài phạm vi kiểm soát hợp lý của Ban Tổ Chức.
-            </li>
-            <li>
-              Việc tham dự sự kiện đồng nghĩa khách hàng đồng ý uỷ quyền để Ban
-              Tổ Chức hỗ trợ sơ cứu và/hoặc sắp xếp vận chuyển đến cơ sở y tế
-              phù hợp khi cần thiết.
-              <span class="mark"
-                >Khách hàng tự thanh toán toàn bộ chi phí chăm sóc y tế và vận
-                chuyển (nếu có).</span
-              >
-            </li>
-          </ul>
+          <section id="ve" aria-labelledby="h-ve">
+            <h3 id="h-ve">3. Quy định về vé tham dự sự kiện</h3>
+            <ul class="mix">
+              <li>
+                Vé tham dự đêm nhạc:
+                <ul>
+                  <li>Không được quy đổi thành tiền mặt.</li>
+                  <li>
+                    Không được chuyển nhượng dưới mọi hình thức (trừ khi có quy
+                    định khác từ Samsung).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Ban tổ chức có quyền từ chối quyền tham dự, yêu cầu rời khỏi địa
+                điểm nếu:
+                <ul>
+                  <li>Khách hàng không cung cấp đủ thông tin xác minh.</li>
+                  <li>Vé không hợp lệ hoặc có dấu hiệu gian lận.</li>
+                  <li>
+                    Khách hàng có hành vi không phù hợp, gây rối hoặc không tuân
+                    thủ quy định của chương trình.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
 
-          <h4 id="tu-trang">c) Quy định bảo quản tư trang</h4>
-          <ul>
-            <li>
-              Sự kiện không bố trí khu vực giữ hoặc ký gửi hành lý, tư trang.
-              Khán giả có trách nhiệm tự bảo quản đồ dùng và tài sản cá nhân
-              trong suốt thời gian tham dự.
-            </li>
-            <li>
-              Ban Tổ Chức không chịu trách nhiệm đối với các trường hợp thất
-              lạc, mất cắp, hư hỏng tài sản cá nhân hoặc các sự cố phát sinh do
-              sơ suất của khán giả, dù xảy ra bên trong hay bên ngoài khu vực tổ
-              chức sự kiện.
-            </li>
-          </ul>
+          <section id="tham-gia" aria-labelledby="h-tham-gia">
+            <h3 id="h-tham-gia">
+              4. Quy định tham gia đêm nhạc Welcome To Galaxy:
+            </h3>
 
-          <h4 id="do-cam">d) Đồ dùng và thiết bị không được phép</h4>
-          <p>
-            Các đồ dùng và thiết bị sau không được phép sử dụng trong khu vực sự
-            kiện:
-          </p>
-          <ul>
-            <li>
-              Balo hoặc túi xách có kích thước
-              <span class="mark">lớn hơn 25cm x 35cm</span>.
-            </li>
-            <li>
-              Chất cấm (chất kích thích), nước uống có cồn, thuốc lá, thuốc lá
-              điện tử.
-            </li>
-            <li>
-              Vũ khí dưới bất kỳ hình thức nào: đèn pin, đèn laser, các vật
-              nhọn, viết, ô dù, chân máy chụp ảnh monopod, gậy selfie.
-            </li>
-            <li>
-              Áp phích, băng cổ vũ, bảng chỉ dẫn mang tính chất chính trị, kích
-              động, ngôn từ không phù hợp thuần phong mỹ tục, và banner
-              <span class="mark">lớn hơn 15cm x 40cm</span>.
-            </li>
-            <li>Các loại động vật và thú nuôi.</li>
-            <li>Bật lửa, nến, pháo bông và các chất phát nổ.</li>
-            <li>
-              Chai thủy tinh, chai nhựa, chai nhôm, lọ thiếc hay các vật chứa
-              nhựa cứng.
-            </li>
-            <li>
-              Thức ăn, đồ uống, ghế ngồi cá nhân mang từ bên ngoài buổi diễn.
-            </li>
-            <li>
-              Bất kỳ vật dụng dễ bốc cháy như rượu, nước hoa, chai xịt khử mùi
-              cơ thể, xăng dầu.
-            </li>
-          </ul>
-        </section>
+            <h4 id="check-in">
+              a) Quy định check-in tại đêm nhạc Welcome To Galaxy:
+            </h4>
+            <ul class="mix">
+              <li>
+                Khách hàng có trách nhiệm xếp hàng trật tự, tuân thủ hướng dẫn
+                của Ban Tổ Chức và không chen lấn, xô đẩy trong quá trình
+                check-in và vào khu vực sự kiện.
+              </li>
+              <li>
+                01 (một) vé điện tử có chứa mã QR hợp lệ chỉ có giá trị sử dụng
+                cho 01 (một) người tham dự, không áp dụng cho trẻ em hoặc người
+                chưa thành niên đi kèm.
+              </li>
+              <li>
+                Khách hàng khi tham gia sự kiện sử dụng Vé điện tử có chứa mã QR
+                hợp lệ để check-in tại cổng vào khu vực sự kiện.
+              </li>
+              <li class="sub">
+                Hệ thống sẽ tự động xác nhận kết quả check-in (thành công/không
+                thành công) ngay sau khi quét mã.
+              </li>
+              <li class="sub">
+                Mỗi mã QR chỉ có giá trị sử dụng 01 (một) lần. Các mã đã được sử
+                dụng hoặc trùng lặp sẽ không hợp lệ.
+              </li>
+              <li class="sub">
+                Trong trường hợp mã QR không hợp lệ, đã được sử dụng hoặc không
+                tồn tại trên hệ thống, khách hàng sẽ không đủ điều kiện tham gia
+                sự kiện. Ban Tổ Chức có quyền kiểm tra và đối soát thông tin để
+                xác thực điều kiện vào cổng.
+              </li>
+              <li>
+                Ban Tổ Chức không chịu trách nhiệm trong trường hợp khách hàng
+                làm mất, xoá hoặc không thể cung cấp Vé điện tử có chứa mã QR
+                hợp lệ tại thời điểm check-in.
+              </li>
+              <li>
+                Ban Tổ Chức có quyền từ chối quyền tham gia đối với các trường
+                hợp khách hàng đến sau thời gian check-in theo quy định.
+              </li>
+            </ul>
 
-        <section id="gian-lan" aria-labelledby="h-gian-lan">
-          <h3 id="h-gian-lan">5. Quy định về hành vi gian lận</h3>
-          <p>
-            Ban Tổ Chức có quyền từ chối quyền tham dự trong các trường hợp:
-          </p>
-          <ul>
-            <li>Gian lận hoặc có dấu hiệu gian lận.</li>
-            <li>Lợi dụng chương trình để trục lợi.</li>
-            <li>Vi phạm bất kỳ điều khoản nào của chương trình.</li>
-          </ul>
-        </section>
+            <h4 id="suc-khoe">
+              b) Quy định về sức khỏe tại đêm nhạc Welcome To Galaxy:
+            </h4>
+            <ul class="mix">
+              <li class="sub">
+                Phụ nữ mang thai và người có vấn đề về sức khỏe được khuyến nghị
+                cân nhắc tình trạng sức khỏe của bản thân trước khi quyết định
+                tham dự sự kiện.
+              </li>
+              <li class="sub">
+                Khi tham dự sự kiện, khán giả có trách nhiệm chủ động theo dõi
+                và bảo vệ sức khỏe của bản thân, đồng thời cân nhắc các yếu tố
+                có thể ảnh hưởng đến sức khỏe, bao gồm điều kiện thời tiết bất
+                lợi trước, trong và sau sự kiện; tình trạng sức khỏe hiện có; và
+                các rủi ro phát sinh trong quá trình di chuyển đến hoặc rời khỏi
+                địa điểm tổ chức.
+              </li>
+              <li class="sub">
+                Ban Tổ Chức không chịu trách nhiệm đối với các vấn đề sức khỏe
+                phát sinh từ tình trạng bệnh lý có sẵn của khán giả hoặc các
+                nguyên nhân nằm ngoài phạm vi kiểm soát hợp lý của Ban Tổ Chức.
+              </li>
+              <li class="sub">
+                Với việc tham dự sự kiện đồng nghĩa khách hàng đồng ý uỷ quyền
+                để Ban Tổ Chức hỗ trợ sơ cứu và/hoặc sắp xếp vận chuyển đến cơ
+                sở y tế phù hợp trong trường hợp cần thiết. Khách hàng có trách
+                nhiệm thanh toán toàn bộ chi phí phát sinh liên quan đến việc
+                chăm sóc y tế và vận chuyển (nếu có).
+              </li>
+            </ul>
 
-        <section id="samsung" aria-labelledby="h-samsung">
-          <h3 id="h-samsung">6. Quyền và trách nhiệm của Samsung</h3>
-          <p>Samsung có quyền:</p>
-          <ul>
-            <li>Thay đổi nội dung chương trình.</li>
-            <li>
-              Chấm dứt chương trình trước thời hạn trong trường hợp cần thiết.
-            </li>
-          </ul>
-          <p>Mọi thay đổi sẽ được thông báo phù hợp đến khách hàng.</p>
-        </section>
+            <h4 id="tu-trang">
+              c) Quy định bảo quản tư trang tại đêm nhạc Welcome To Galaxy:
+            </h4>
+            <ul class="mix">
+              <li class="sub">
+                Sự kiện không bố trí khu vực giữ hoặc ký gửi hành lý, tư trang.
+                Khán giả có trách nhiệm tự bảo quản đồ dùng và tài sản cá nhân
+                trong suốt thời gian tham dự sự kiện.
+              </li>
+              <li class="sub">
+                Ban Tổ Chức không chịu trách nhiệm đối với các trường hợp thất
+                lạc, mất cắp, hư hỏng tài sản cá nhân hoặc các sự cố phát sinh
+                do sơ suất của khán giả, dù xảy ra bên trong hay bên ngoài khu
+                vực tổ chức sự kiện.
+              </li>
+            </ul>
 
-        <section id="bat-kha-khang" aria-labelledby="h-bat-kha-khang">
-          <h3 id="h-bat-kha-khang">7. Điều khoản bất khả kháng</h3>
-          <p>
-            Trong trường hợp xảy ra các sự kiện ngoài tầm kiểm soát (bao gồm
-            nhưng không giới hạn: thiên tai, dịch bệnh, chiến tranh, quyết định
-            của cơ quan nhà nước…), Samsung có quyền thay đổi, tạm hoãn hoặc hủy
-            bỏ chương trình mà không phải chịu trách nhiệm bồi thường.
-          </p>
-        </section>
+            <h4 id="do-cam">
+              d) Các đồ dùng/thiết bị sau không được phép sử dụng trong khu vực
+              sự kiện:
+            </h4>
+            <ul class="mix">
+              <li class="sub">
+                Balo/túi xách có kích thước lớn hơn 25cm x 35cm.
+              </li>
+              <li class="sub">
+                Chất cấm (chất kích thích), nước uống có cồn, thuốc lá, thuốc lá
+                điện tử không được phép sử dụng trong khu vực sự kiện.
+              </li>
+              <li class="sub">
+                Cấm mang vũ khí dưới bất kỳ hình thức nào: đèn pin/đèn laser/các
+                vật nhọn/viết/ô dù/chân máy chụp ảnh monopod/gậy selfie.
+              </li>
+              <li class="sub">
+                Áp phích/băng cổ vũ/bảng chỉ dẫn mang tính chất chính trị, kích
+                động, ngôn từ không phù hợp thuần phong mỹ tục và banner lớn hơn
+                15cm x 40cm.
+              </li>
+              <li class="sub">Các loại động vật/thú nuôi.</li>
+              <li class="sub">Bật lửa/nến/pháo bông và các chất phát nổ.</li>
+              <li class="sub">
+                Chai thủy tinh/chai nhựa/chai nhôm/lọ thiếc hay các vật chứa
+                nhựa cứng.
+              </li>
+              <li class="sub">
+                Thức ăn/đồ uống/ghế ngồi cá nhân từ bên ngoài buổi diễn.
+              </li>
+              <li class="sub">
+                Bất kỳ vật dụng dễ bốc cháy như rượu/nước hoa/chai xịt khử mùi
+                cơ thể/xăng dầu…
+              </li>
+            </ul>
+          </section>
 
-        <section id="bao-mat" aria-labelledby="h-bao-mat">
-          <h3 id="h-bao-mat">8. Bảo mật thông tin</h3>
-          <ul>
-            <li>
+          <section id="gian-lan" aria-labelledby="h-gian-lan">
+            <h3 id="h-gian-lan">5. Quy định về hành vi gian lận</h3>
+            <p>
+              Ban Tổ Chức có quyền từ chối quyền tham dự trong các trường hợp:
+            </p>
+            <ul class="mix">
+              <li>Gian lận hoặc có dấu hiệu gian lận</li>
+              <li>Lợi dụng chương trình để trục lợi</li>
+              <li>Vi phạm bất kỳ điều khoản nào của chương trình</li>
+            </ul>
+          </section>
+
+          <section id="samsung" aria-labelledby="h-samsung">
+            <h3 id="h-samsung">6. Quyền và trách nhiệm của Samsung</h3>
+            <p>Samsung có quyền:</p>
+            <ul class="mix">
+              <li>Thay đổi nội dung chương trình</li>
+              <li>
+                Chấm dứt chương trình trước thời hạn trong trường hợp cần thiết
+              </li>
+            </ul>
+            <p>Mọi thay đổi sẽ được thông báo phù hợp đến khách hàng.</p>
+          </section>
+
+          <section id="bat-kha-khang" aria-labelledby="h-bat-kha-khang">
+            <h3 id="h-bat-kha-khang">7. Điều khoản bất khả kháng</h3>
+            <p>
+              Trong trường hợp xảy ra các sự kiện ngoài tầm kiểm soát (bao gồm
+              nhưng không giới hạn: thiên tai, dịch bệnh, chiến tranh, quyết
+              định của cơ quan nhà nước…), Samsung có quyền thay đổi, tạm hoãn
+              hoặc hủy bỏ chương trình mà không phải chịu trách nhiệm bồi
+              thường.
+            </p>
+          </section>
+
+          <section id="bao-mat" aria-labelledby="h-bao-mat">
+            <h3 id="h-bao-mat">8. Bảo mật thông tin</h3>
+            <p>
               Thông tin khách hàng cung cấp sẽ được sử dụng cho mục đích vận
               hành chương trình và các hoạt động liên quan.
-            </li>
-            <li>
+            </p>
+            <p>
               Samsung cam kết bảo mật thông tin theo quy định pháp luật hiện
               hành.
-            </li>
-          </ul>
-        </section>
+            </p>
+          </section>
 
-        <section class="closing" aria-label="Xác nhận điều khoản">
-          <p>
-            Bằng việc tham gia chương trình, khách hàng đồng ý với toàn bộ Điều
-            khoản &amp; Điều kiện này. Trong mọi trường hợp,
-            <span class="mark"
-              >quyết định của Samsung là quyết định cuối cùng</span
-            >.
-          </p>
-          <p>
-            Mọi thắc mắc chi tiết về chương trình, vui lòng liên hệ
-            <a href="https://www.facebook.com/SamsungVietnam"
-              >Samsung Vietnam Fanpage</a
-            >.
-          </p>
-        </section>
+          <section class="closing" aria-label="Xác nhận điều khoản">
+            <p>
+              Bằng việc tham gia chương trình, khách hàng đồng ý với toàn bộ
+              Điều khoản &amp; Điều kiện này. Trong mọi trường hợp, quyết định
+              của Samsung là quyết định cuối cùng.
+            </p>
+            <p>
+              Mọi thắc mắc chi tiết về chương trình, vui lòng liên hệ
+              <a href="https://www.facebook.com/SamsungVietnam"
+                >Samsung Vietnam Fanpage</a
+              >.
+            </p>
+          </section>
+        </div>
       </article>
     </div>
 
