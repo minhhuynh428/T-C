@@ -266,8 +266,25 @@
       }
 
       #galaxy-run,
+      #galaxy-studio,
+      #galaxy-concert,
       #h-dieu-khoan {
         font-weight: 700;
+      }
+
+      #h-dieu-khoan {
+        text-align: center;
+        font-size: 19px;
+        line-height: 27px;
+      }
+
+      #galaxy-concert {
+        padding-top: 60px;
+      }
+
+      .program h3 + p,
+      .program h3 + ul {
+        padding-top: 18px;
       }
 
       .terms h3 {
@@ -298,12 +315,25 @@
       }
 
       ul.sub-list {
+        list-style: none;
         margin-top: 6px;
         padding-top: 0;
+        padding-left: 4px;
+      }
+
+      ul.sub-list > li {
+        position: relative;
+        padding-left: 16px;
       }
 
       ul.sub-list li + li {
-        margin-top: 3px;
+        margin-top: 6px;
+      }
+
+      ul.sub-list > li::before {
+        content: "+";
+        position: absolute;
+        left: 0;
       }
 
       .terms,
@@ -404,6 +434,10 @@
 
       /* ═══ Breakpoint: ≥ 600px (landscape phone / small tablet) ═══ */
       @media (min-width: 600px) {
+        br.only-mobile {
+          display: none;
+        }
+
         body {
           font-size: 16px;
           line-height: 27px;
@@ -423,6 +457,11 @@
           padding-top: 36px;
           font-size: 19px;
           line-height: 27px;
+        }
+
+        #h-dieu-khoan {
+          font-size: 21px;
+          line-height: 30px;
         }
 
         h4 {
@@ -483,6 +522,11 @@
           padding-top: 40px;
           font-size: 21px;
           line-height: 30px;
+        }
+
+        #h-dieu-khoan {
+          font-size: 23px;
+          line-height: 32px;
         }
 
         h4 {
@@ -586,43 +630,57 @@
         </header>
 
         <section class="program" aria-labelledby="galaxy-run">
-          <h3 id="galaxy-run">I. GALAXY RUN</h3>
-
-          <p class="meta-line">1. Race Day: 22/11/2026</p>
+          <h3 id="galaxy-run">I. Galaxy Run:</h3>
+          <p>
+            Galaxy Run 2026 đã sẵn sàng chào đón các runners, săn vé ngay tại:
+            <a
+              href="http://smsng.co/GalaxyRun-2026"
+              target="_blank"
+              rel="noopener"
+              >smsng.co/GalaxyRun-2026</a
+            >
+          </p>
           <ul>
             <li>
-              Địa điểm: Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC), 799 đường
-              Nguyễn Văn Linh, Khu đô thị Phú Mỹ Hưng, TP.HCM.
+              Thời gian:
+              <ul class="sub-list">
+                <li>
+                  Expo Day: 21/11/2026 | Trung tâm Hội chợ và Triển lãm Sài Gòn
+                  (SECC) - 799 đường Nguyễn Văn Linh, Khu đô thị Phú Mỹ Hưng,
+                  Thành phố Hồ Chí Minh
+                </li>
+                <li>
+                  Race Day: 22/11/2026 | Khu vực xuất phát tại đường Tân Trào,
+                  phường Tân Mỹ, Thành phố Hồ Chí Minh
+                </li>
+              </ul>
             </li>
             <li>
-              Galaxy Run 2026 đã sẵn sàng chào đón các runners, săn vé ngay tại:
-              <a
-                href="http://smsng.co/GalaxyRun-2026"
-                target="_blank"
-                rel="noopener"
-                >smsng.co/GalaxyRun-2026</a
-              >
-            </li>
-            <li>
-              Giá BIB niêm yết:
+              Giá Bib niêm yết:
               <ul class="sub-list">
                 <li>5KM: 199.000 VNĐ</li>
                 <li>10KM: 299.000 VNĐ</li>
                 <li>21KM: 399.000 VNĐ</li>
               </ul>
             </li>
+            <li>
+              Xem thông tin chi tiết tại
+              <a
+                href="https://www.facebook.com/galaxyrun2026"
+                target="_blank"
+                rel="noopener"
+                >Fanpage Giải chạy Galaxy Run</a
+              >.
+            </li>
           </ul>
-          <p>
-            Xem thông tin chi tiết tại
-            <a
-              href="https://www.facebook.com/share/r/1dQSSf1GHV/"
-              target="_blank"
-              rel="noopener"
-              >Fanpage Samsung Vietnam</a
-            >.
-          </p>
+        </section>
 
-          <p class="meta-line">2. Expo Day: 21-22/11/2026</p>
+        <section class="program" aria-labelledby="galaxy-studio">
+          <h3 id="galaxy-studio">II. Galaxy Studio: 21 - 22/11/2026</h3>
+          <p>
+            Chuỗi hoạt động trải nghiệm công nghệ, khám phá các sản phẩm mới
+            nhất và giao lưu cùng các Tech Reviewer.
+          </p>
           <div class="gallery">
             <img
               src="hinh-1.png"
@@ -649,8 +707,10 @@
               alt="Khu #GalaxyCamera tại Expo Day"
             />
           </div>
+        </section>
 
-          <p class="meta-line">3. Đêm nhạc Welcome To Galaxy: 22/11/2026</p>
+        <section class="program" aria-labelledby="galaxy-concert">
+          <h3 id="galaxy-concert">III. Galaxy Concert: 22/11/2026</h3>
           <ul class="mix plus">
             <li>
               <strong>Địa điểm:</strong> Trung tâm Hội chợ và Triển Lãm Sài Gòn
@@ -703,7 +763,8 @@
 
         <div class="terms">
           <h3 id="h-dieu-khoan">
-            II. Điều kiện và điều khoản tham dự Đêm nhạc Welcome to Galaxy
+            Điều kiện và điều khoản tham dự<br class="only-mobile" />
+            Galaxy Concert
           </h3>
           <section id="doi-tuong" aria-labelledby="h-doi-tuong">
             <h3 id="h-doi-tuong">1. Đối tượng tham gia hoạt động:</h3>
@@ -745,13 +806,9 @@
           </section>
 
           <section id="tham-gia" aria-labelledby="h-tham-gia">
-            <h3 id="h-tham-gia">
-              3. Quy định tham gia đêm nhạc Welcome To Galaxy:
-            </h3>
+            <h3 id="h-tham-gia">3. Quy định tham gia Galaxy Concert:</h3>
 
-            <h4 id="check-in">
-              a) Quy định check-in tại đêm nhạc Welcome To Galaxy:
-            </h4>
+            <h4 id="check-in">a) Quy định check-in tại Galaxy Concert</h4>
             <ul class="mix">
               <li>
                 Khách hàng có trách nhiệm xếp hàng trật tự, tuân thủ hướng dẫn
@@ -792,9 +849,7 @@
               </li>
             </ul>
 
-            <h4 id="suc-khoe">
-              b) Quy định về sức khỏe tại đêm nhạc Welcome To Galaxy:
-            </h4>
+            <h4 id="suc-khoe">b) Quy định về sức khỏe tại Galaxy Concert:</h4>
             <ul class="mix">
               <li class="sub">
                 Phụ nữ mang thai và người có vấn đề về sức khỏe được khuyến nghị
@@ -824,7 +879,7 @@
             </ul>
 
             <h4 id="tu-trang">
-              c) Quy định bảo quản tư trang tại đêm nhạc Welcome To Galaxy:
+              c) Quy định bảo quản tư trang tại Galaxy Concert:
             </h4>
             <ul class="mix">
               <li class="sub">
