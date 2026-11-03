@@ -266,6 +266,14 @@
         font-weight: 700;
       }
 
+      .terms h3 {
+        font-weight: 600;
+      }
+
+      #h-doi-tuong {
+        padding-top: 18px;
+      }
+
       /* ─── H4 sub-headings ─── */
       h4 {
         margin: 0;
@@ -324,6 +332,21 @@
 
       ul.mix > li.sub::before {
         content: "•";
+      }
+
+      ul.mix.plus {
+        list-style: disc;
+        margin-left: 18px;
+        padding-top: 28px;
+        padding-left: 18px;
+      }
+
+      ul.mix.plus > li {
+        padding-left: 0;
+      }
+
+      ul.mix.plus > li::before {
+        content: none;
       }
 
       ul.mix ul {
@@ -584,7 +607,7 @@
             >.
           </p>
 
-          <p class="meta-line">2. Expo Day: 22/11/2026</p>
+          <p class="meta-line">2. Expo Day: 21-22/11/2026</p>
           <div class="gallery">
             <img
               src="hinh-1.png"
@@ -613,44 +636,58 @@
           </div>
 
           <p class="meta-line">3. Đêm nhạc Welcome To Galaxy: 22/11/2026</p>
+          <ul class="mix">
+            <li>
+              Địa điểm: Trung tâm Hội chợ và Triển Lãm Sài Gòn (SECC), 799
+              Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
+            </li>
+            <li>Thời gian check-in: 14:00, ngày 22/11/2026</li>
+            <li>Thời gian bắt đầu: 18:00, ngày 22/11/2026</li>
+            <li>
+              Lưu ý: Đây là sự kiện không bán vé. Vé tham dự được cấp theo thể
+              lệ và điều kiện của chương trình.
+            </li>
+          </ul>
           <figure class="poster">
             <img
               src="kv-show-16.jpg"
               alt="Welcome To Galaxy Festival. Galaxy Concert 18:00–22:00, 22/11/2026 tại SECC, 799 Nguyễn Văn Linh, Phường Tân Mỹ, TP. Hồ Chí Minh."
             />
           </figure>
+          <ul class="mix plus">
+            <li>
+              <strong>PUBLIC ZONE:</strong> Khu vực dành cho khán giả tham dự tự
+              do, với số lượng vé có hạn.
+            </li>
+            <li>
+              <strong>FANZONE:</strong> Khu vực dành cho khán giả tham gia các
+              hoạt động tương tác do Samsung hoặc các đơn vị đối tác tổ chức.
+            </li>
+            <li>
+              <strong>VIP:</strong> Khu vực dành cho khách hàng mua sản phẩm của
+              Samsung và đủ điều kiện nhận vé VIP theo thể lệ chương trình.
+            </li>
+            <li>
+              <strong>VVIP:</strong> Khu vực dành riêng cho các đối tác và khách
+              quý đã đồng hành cùng Samsung.
+            </li>
+          </ul>
+          <figure class="poster">
+            <img
+              src="seat-map.png"
+              width="895"
+              height="1024"
+              alt="Sơ đồ chỗ ngồi đêm nhạc: Stage, Fanzone A và B, Public Zone A và B, VVIP, VIP A và B, FOH."
+            />
+          </figure>
         </section>
 
-        <h3 id="h-dieu-khoan">
-          II. Điều kiện và điều khoản tham dự Đêm nhạc Welcome to Galaxy
-        </h3>
-
         <div class="terms">
-          <p class="lead">
-            Công ty TNHH Samsung Electronics Việt Nam Thái Nguyên – Chi nhánh
-            HCM (SEVT) xin trân trọng thông báo chương trình như sau:
-          </p>
-
-          <section id="thong-tin" aria-labelledby="h-thong-tin">
-            <h3 id="h-thong-tin">
-              1. Thông tin về đêm nhạc Welcome To Galaxy:
-            </h3>
-            <ul class="mix">
-              <li>
-                Địa điểm: Trung tâm Hội chợ và Triển Lãm Sài Gòn (SECC), 799
-                Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
-              </li>
-              <li>Thời gian check-in: 14:00, ngày 22/11/2026</li>
-              <li>Thời gian bắt đầu: 18:00, ngày 22/11/2026</li>
-              <li>
-                Đây là sự kiện không bán vé. Vé tham dự được cấp theo thể lệ và
-                điều kiện của chương trình.
-              </li>
-            </ul>
-          </section>
-
+          <h3 id="h-dieu-khoan">
+            II. Điều kiện và điều khoản tham dự Đêm nhạc Welcome to Galaxy
+          </h3>
           <section id="doi-tuong" aria-labelledby="h-doi-tuong">
-            <h3 id="h-doi-tuong">2. Đối tượng tham gia hoạt động:</h3>
+            <h3 id="h-doi-tuong">1. Đối tượng tham gia hoạt động:</h3>
             <ul class="mix">
               <li>Công dân Việt Nam (Từ đủ 16 tuổi trở lên).</li>
               <li>
@@ -661,7 +698,7 @@
           </section>
 
           <section id="ve" aria-labelledby="h-ve">
-            <h3 id="h-ve">3. Quy định về vé tham dự sự kiện</h3>
+            <h3 id="h-ve">2. Quy định về vé tham dự sự kiện</h3>
             <ul class="mix">
               <li>
                 Vé tham dự đêm nhạc:
@@ -690,7 +727,7 @@
 
           <section id="tham-gia" aria-labelledby="h-tham-gia">
             <h3 id="h-tham-gia">
-              4. Quy định tham gia đêm nhạc Welcome To Galaxy:
+              3. Quy định tham gia đêm nhạc Welcome To Galaxy:
             </h3>
 
             <h4 id="check-in">
@@ -822,7 +859,7 @@
           </section>
 
           <section id="gian-lan" aria-labelledby="h-gian-lan">
-            <h3 id="h-gian-lan">5. Quy định về hành vi gian lận</h3>
+            <h3 id="h-gian-lan">4. Quy định về hành vi gian lận</h3>
             <p>
               Ban Tổ Chức có quyền từ chối quyền tham dự trong các trường hợp:
             </p>
@@ -834,7 +871,7 @@
           </section>
 
           <section id="samsung" aria-labelledby="h-samsung">
-            <h3 id="h-samsung">6. Quyền và trách nhiệm của Samsung</h3>
+            <h3 id="h-samsung">5. Quyền và trách nhiệm của Samsung</h3>
             <p>Samsung có quyền:</p>
             <ul class="mix">
               <li>Thay đổi nội dung chương trình</li>
@@ -846,7 +883,7 @@
           </section>
 
           <section id="bat-kha-khang" aria-labelledby="h-bat-kha-khang">
-            <h3 id="h-bat-kha-khang">7. Điều khoản bất khả kháng</h3>
+            <h3 id="h-bat-kha-khang">6. Điều khoản bất khả kháng</h3>
             <p>
               Trong trường hợp xảy ra các sự kiện ngoài tầm kiểm soát (bao gồm
               nhưng không giới hạn: thiên tai, dịch bệnh, chiến tranh, quyết
@@ -857,7 +894,7 @@
           </section>
 
           <section id="bao-mat" aria-labelledby="h-bao-mat">
-            <h3 id="h-bao-mat">8. Bảo mật thông tin</h3>
+            <h3 id="h-bao-mat">7. Bảo mật thông tin</h3>
             <p>
               Thông tin khách hàng cung cấp sẽ được sử dụng cho mục đích vận
               hành chương trình và các hoạt động liên quan.
