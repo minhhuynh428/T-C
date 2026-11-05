@@ -280,10 +280,6 @@
         text-align: center;
       }
 
-      #galaxy-concert {
-        padding-top: 60px;
-      }
-
       .program h3 + p,
       .program h3 + ul {
         padding-top: 18px;
@@ -388,10 +384,15 @@
         content: none;
       }
 
-      ul.mix ul:not(.sub-list) {
+      ul.mix ul:not(.sub-list):not(.mix) {
         list-style: disc;
         margin: 0;
         padding: 8px 0 0 18px;
+      }
+
+      ul.mix ul.mix {
+        margin: 0;
+        padding: 8px 0 0 0;
       }
 
       ul.mix ul li + li {
@@ -626,8 +627,90 @@
           </h1>
         </header>
 
+        <section class="program" aria-labelledby="galaxy-concert">
+          <h3 id="galaxy-concert">I. Galaxy Concert: 22/11/2026</h3>
+          <ul class="mix">
+            <li>
+              <strong>Địa điểm:</strong> Trung tâm Hội chợ và Triển Lãm Sài Gòn
+              (SECC), 799 Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
+            </li>
+            <li>
+              <strong>Thời gian Đổi vòng tay:</strong> 10:00, ngày 22/11/2026
+            </li>
+            <li><strong>Thời gian bắt đầu:</strong> 18:00, ngày 22/11/2026</li>
+            <li>
+              <strong>Lưu ý:</strong> Đây là sự kiện không bán vé. Vé tham dự
+              được cấp theo thể lệ và điều kiện của chương trình.
+            </li>
+          </ul>
+          <figure class="poster">
+            <img
+              src="kv-show-16-nologo.jpg"
+              width="1024"
+              height="682"
+              alt="Welcome To Galaxy Festival. Galaxy Concert 18:00–22:00, 22.11.2026 tại SECC, 799 Nguyễn Văn Linh, Phường Tân Mỹ, TP. Hồ Chí Minh. Lineup gồm MC Trung Coffee, Chillies, Phùng Khánh Linh, Hieuthuhai, Văn Mai Hương, buitruonglinh, CONGB và DJ KS."
+            />
+          </figure>
+          <figure class="poster">
+            <img
+              src="seat-map-2.png"
+              width="895"
+              height="1024"
+              alt="Sơ đồ chỗ ngồi đêm nhạc: Stage, Fanzone A và B, Public Zone A và B, VVIP, VIP A và B, FOH."
+            />
+          </figure>
+          <ul class="mix">
+            <li>
+              <strong>FANZONE:</strong> Khu vực dành cho khán giả tham gia các
+              hoạt động tương tác do Samsung hoặc các đơn vị đối tác tổ chức
+              thông qua các kênh:
+              <ul class="mix">
+                <li>Samsung Vietnam Fanpage</li>
+                <li>Fandom nghệ sĩ tham gia chương trình</li>
+                <li>
+                  Fanpage chính thức của các kênh đại lý như Thế Giới Di Động,
+                  FPT Shop, Cellphone S, Viettel Store, Di Động Việt, Hoàng Hà
+                  Mobile,..
+                </li>
+                <li>
+                  Các cộng đồng công nghệ như Tinhte.vn, Techrum.vn, Samfans
+                  Community Vietnam,..
+                </li>
+                <li>
+                  Hoạt động tương tác tại Galaxy Studio vào ngày 21.11.2026
+                  (8:00 - 19:00) & 22.11.2026 (6:00 - 14:00)
+                </li>
+              </ul>
+              Thông tin chi tiết sẽ được cập nhật sớm. Số lượng vé có hạn.
+              Chương trình có thể kết thúc sớm hơn dự kiến khi hết vé hoặc theo
+              quyết định của Ban Tổ chức. Điều khoản và điều kiện được áp dụng
+              (T&Cs apply).
+            </li>
+            <li>
+              <strong>PUBLIC ZONE:</strong> Khu vực dành cho khán giả tham dự tự
+              do, đăng ký vào cổng tại sự kiện từ 10:00 ngày 22.11.2026. Số
+              lượng vé có hạn, chương trình sẽ tạm dừng đăng ký khi đã đủ số
+              lượng. Điều khoản và điều kiện được áp dụng (T&Cs apply).
+            </li>
+            <li>
+              <strong>VIP:</strong> Khu vực dành cho khách hàng mua sản phẩm
+              Samsung Galaxy: Galaxy Z Fold8 Ultra, Z Fold8, Z Flip8, Galaxy S26
+              Ultra, S26 base, S26 plus, S26 FE từ ngày 1/11 - 15/11/2026 tại
+              cửa hàng Samsung68, Samsung Westlake, các hệ thống cửa hàng Thế
+              Giới Di Động, FPT Shop, Cellphone S, Viettel Store, Di Động Việt,
+              Hoàng Hà Mobile, SamCenter, BNI, Khương Việt tại thành phố Hồ Chí
+              Minh (Mới) và cửa hàng trực tuyến Samsung.com/vn, Samsung Official
+              Store tại Shopee, Samsung Flagship store tại Lazada.
+            </li>
+            <li>
+              <strong>VVIP:</strong> Khu vực dành cho các đối tác và khách quý
+              đã đồng hành cùng Samsung Galaxy.
+            </li>
+          </ul>
+        </section>
+
         <section class="program" aria-labelledby="galaxy-run">
-          <h3 id="galaxy-run">I. Galaxy Run:</h3>
+          <h3 id="galaxy-run">II. Galaxy Run:</h3>
           <p>
             Galaxy Run 2026 đã sẵn sàng chào đón các runners, săn vé ngay tại:
             <a
@@ -673,77 +756,19 @@
         </section>
 
         <section class="program" aria-labelledby="galaxy-studio">
-          <h3 id="galaxy-studio">II. Galaxy Studio: 21 - 22/11/2026</h3>
+          <h3 id="galaxy-studio">III. Galaxy Studio: 21 - 22/11/2026</h3>
           <p>
             Chuỗi hoạt động trải nghiệm công nghệ, khám phá các sản phẩm mới
             nhất và giao lưu cùng các Tech Reviewer.
           </p>
           <figure class="poster">
             <img
-              src="post_01.png"
+              src="SS_KV-NGANG.png"
               width="682"
               height="1024"
               alt="Galaxy Studio tại Welcome To Galaxy Festival. 14 hoạt động trải nghiệm, cơ hội nhận 1 trong 1000 vé Fanzone tham gia Concert Welcome to Galaxy. Mở cửa 8:00–19:00 ngày 21.11.2026 và 7:30–22:00 ngày 22.11.2026 tại SECC, 799 Nguyễn Văn Linh, Phường Tân Mỹ, TP. Hồ Chí Minh."
             />
           </figure>
-        </section>
-
-        <section class="program" aria-labelledby="galaxy-concert">
-          <h3 id="galaxy-concert">III. Galaxy Concert: 22/11/2026</h3>
-          <ul class="mix">
-            <li>
-              <strong>Địa điểm:</strong> Trung tâm Hội chợ và Triển Lãm Sài Gòn
-              (SECC), 799 Nguyễn Văn Linh, phường Tân Mỹ, TP.HCM.
-            </li>
-            <li>
-              <strong>Thời gian Đổi vòng tay:</strong> 10:00, ngày 22/11/2026
-            </li>
-            <li><strong>Thời gian bắt đầu:</strong> 18:00, ngày 22/11/2026</li>
-            <li>
-              <strong>Lưu ý:</strong> Đây là sự kiện không bán vé. Vé tham dự
-              được cấp theo thể lệ và điều kiện của chương trình.
-            </li>
-          </ul>
-          <figure class="poster">
-            <img
-              src="kv-show-16-nologo.jpg"
-              width="1024"
-              height="682"
-              alt="Welcome To Galaxy Festival. Galaxy Concert 18:00–22:00, 22.11.2026 tại SECC, 799 Nguyễn Văn Linh, Phường Tân Mỹ, TP. Hồ Chí Minh. Lineup gồm MC Trung Coffee, Chillies, Phùng Khánh Linh, Hieuthuhai, Văn Mai Hương, buitruonglinh, CONGB và DJ KS."
-            />
-          </figure>
-          <figure class="poster">
-            <img
-              src="seat-map-2.png"
-              width="895"
-              height="1024"
-              alt="Sơ đồ chỗ ngồi đêm nhạc: Stage, Fanzone A và B, Public Zone A và B, VVIP, VIP A và B, FOH."
-            />
-          </figure>
-          <ul class="mix">
-            <li>
-              <strong>PUBLIC ZONE:</strong> Khu vực dành cho khán giả tham dự tự
-              do, với số lượng vé có hạn.
-            </li>
-            <li>
-              <strong>FANZONE:</strong> Khu vực dành cho khán giả tham gia các
-              hoạt động tương tác do Samsung hoặc các đơn vị đối tác tổ chức.
-            </li>
-            <li>
-              <strong>VIP:</strong> Khu vực dành cho khách hàng mua sản phẩm
-              Samsung Galaxy: Galaxy Z Fold8 Ultra, Z Fold8, Z Flip8, Galaxy S26
-              Ultra, S26 base, S26 plus, S26 FE từ ngày 1/11 - 15/11/2026 tại
-              cửa hàng Samsung68, Samsung Westlake, các hệ thống cửa hàng Thế
-              Giới Di Động, FPT Shop, Cellphone S, Viettel Store, Di Động Việt,
-              Hoàng Hà Mobile, SamCenter, BNI, Khương Việt tại thành phố Hồ Chí
-              Minh (Mới) và cửa hàng trực tuyến Samsung.com/vn, Samsung Official
-              Store tại Shopee, Samsung Flagship store tại Lazada.
-            </li>
-            <li>
-              <strong>VVIP:</strong> Khu vực dành cho các đối tác và khách quý
-              đã đồng hành cùng Samsung Galaxy.
-            </li>
-          </ul>
         </section>
 
         <div class="terms">
